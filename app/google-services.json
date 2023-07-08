@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "724873407240",
+    "firebase_url": "https://homedecore-android-project-default-rtdb.firebaseio.com",
+    "project_id": "homedecore-android-project",
+    "storage_bucket": "homedecore-android-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724873407240:android:2feebb06b03f54a906dabd",
+        "android_client_info": {
+          "package_name": "com.rohithcheloor.homedecore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724873407240-blcj54blgs7tqv4gkgg7sln36nngvqib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsOC5z6IbIaVOMZ6EzwZkQ0A1aez1gxkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724873407240-blcj54blgs7tqv4gkgg7sln36nngvqib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
