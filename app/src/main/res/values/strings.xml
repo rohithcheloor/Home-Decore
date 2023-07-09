@@ -2,4 +2,9 @@
     <string name="app_name">HomeDecore</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="home">Home</string>
+    <string name="addToCart">Add to Cart</string>
+    <string name="buyNow">Buy Now</string>
+    <string name="checkout">Checkout</string>
+    <string name="hello">Hello</string>
 </resources>

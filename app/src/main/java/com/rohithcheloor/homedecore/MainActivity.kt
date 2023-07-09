@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
             }
 
             override fun onFinish() {
-                val intent = Intent(this@MainActivity, LoginActivity::class.java)
+                val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 startActivity(intent)
                 finish()
             }
