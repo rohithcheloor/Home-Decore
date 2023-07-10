@@ -13,10 +13,11 @@ class ProductActivity : AppCompatActivity() {
     private var adapter: ProductAdapter? = null
     private var cart = Cart()
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         val query = FirebaseDatabase.getInstance().reference.child("products")
         val options = FirebaseRecyclerOptions.Builder<Product>().setQuery(query, Product::class.java)
             .build()
-        super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_product)
         val checkoutBtn = findViewById<Button>(R.id.checkoutBtn)
         checkoutBtn.isVisible = false
