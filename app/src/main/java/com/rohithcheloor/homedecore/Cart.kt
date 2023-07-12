@@ -1,6 +1,8 @@
 package com.rohithcheloor.homedecore
 
-class Cart {
+import java.io.Serializable
+
+class Cart: Serializable {
     private val cartItems: MutableList<Product> = mutableListOf()
     fun addItem(item: Product) {
         cartItems.add(item)
