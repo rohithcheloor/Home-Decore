@@ -21,11 +21,7 @@ class ProductActivity : AppCompatActivity() {
         setContentView(R.layout.activity_product)
         val checkoutBtn = findViewById<Button>(R.id.checkoutBtn)
         checkoutBtn.isVisible = false
-        adapter = ProductAdapter(options,this.cart,object: ProductAdapter.OnItemClickListener{
-            override fun onItemClick(position: Int) {
-
-            }
-        }, object : ProductAdapter.OnCartUpdateListener{
+        adapter = ProductAdapter(options,this.cart, object : ProductAdapter.OnCartUpdateListener{
             override fun onCartUpdate() {
                 checkoutBtn.text = "Checkout (${cart.getCartCount()})"
                 checkoutBtn.isVisible = cart.getCartCount() > 0
