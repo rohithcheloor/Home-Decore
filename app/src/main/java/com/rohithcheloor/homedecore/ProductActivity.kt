@@ -24,23 +24,11 @@ class ProductActivity : AppCompatActivity() {
         setContentView(R.layout.activity_product)
         val checkoutBtn = findViewById<Button>(R.id.checkoutBtn)
         checkoutBtn.isVisible = false
-
-        adapter = ProductAdapter(
-            options,
-            this.cart,
-            object : ProductAdapter.OnItemClickListener {
-                override fun onItemClick(position: Int) {
-                    // Handle item click if needed
-                }
-            },
-            object : ProductAdapter.OnCartUpdateListener {
-                override fun onCartUpdate() {
-                    checkoutBtn.text = "Checkout (${cart.getCartCount()})"
-                    checkoutBtn.isVisible = cart.getCartCount() > 0
-                }
+        adapter = ProductAdapter(options,this.cart, object : ProductAdapter.OnCartUpdateListener{
+            override fun onCartUpdate() {
+                checkoutBtn.text = "Checkout (${cart.getCartCount()})"
+                checkoutBtn.isVisible = cart.getCartCount() > 0
             }
-        )
-
         val rView: RecyclerView = findViewById(R.id.homeRecyclerView)
         rView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rView.adapter = adapter
