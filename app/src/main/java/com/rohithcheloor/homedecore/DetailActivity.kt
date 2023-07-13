@@ -16,25 +16,25 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        // Retrieve the product details passed from the previous activity
+
         var product = intent.getSerializableExtra("product") as Product
         var cart = intent.getSerializableExtra("cart") as Cart
-        // Bind the product details to the corresponding views
-        val nameTextView: TextView = findViewById(R.id.productName)
-        val priceTextView: TextView = findViewById(R.id.productPrice)
-        val imageImageView: ImageView = findViewById(R.id.product_image)
-        val descriptionTextView: TextView = findViewById(R.id.productDescription)
+
+        val productNameTextView: TextView = findViewById(R.id.productName)
+        val productPriceTextView: TextView = findViewById(R.id.productPrice)
+        val productImageImageView: ImageView = findViewById(R.id.product_image)
+        val productDescriptionTextView: TextView = findViewById(R.id.productDescription)
         val buyButton: Button = findViewById(R.id.buyButton)
 
-        nameTextView.text = product.name
-        priceTextView.text = product.price
-        descriptionTextView.text = product.description
+        productNameTextView.text = product.name
+        productPriceTextView.text = product.price
+        productDescriptionTextView.text = product.description
 
         Glide.with(this)
             .load(Uri.parse(product.image))
-            .into(imageImageView)
+            .into(productImageImageView)
 
-        // Set up the click listener for the "Buy Now" button
+
         buyButton.setOnClickListener {
           cart.addItem(product)
             finish()
