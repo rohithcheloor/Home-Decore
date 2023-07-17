@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,6 +24,10 @@ class LoginActivity : AppCompatActivity() {
 
         emailEditText = findViewById(R.id.emailEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
+
+        val signUpTextView: TextView = findViewById(R.id.signup_textview)
+        signUpTextView.setOnClickListener { onSignUpClicked() }
+
 
         val loginButton: Button = findViewById(R.id.loginBtn)
         loginButton.setOnClickListener { onLoginClicked() }
@@ -54,4 +59,11 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this@LoginActivity, "Please enter email and password", Toast.LENGTH_SHORT).show()
         }
     }
+
+    private fun onSignUpClicked() {
+        // Start the sign-up activity or fragment
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
+    }
+
 }
